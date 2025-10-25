@@ -39,6 +39,7 @@ vector<pair<pair<int, int>, float>> get_transitions(pair<int, int> state,
     // Add to the x value (move right) unless we are at the far right of the
     // grid, assign probability of 0.075
     transition_3 = {{min(state.first + 1, 3), state.second}, 0.075};
+
   } else if (action == "Down") {
     // Subtract from the y value (move down) unless we are at the bottom of the
     // grid, assign probability of 0.85
@@ -51,6 +52,7 @@ vector<pair<pair<int, int>, float>> get_transitions(pair<int, int> state,
     // Add to the x value (move right) unless we are at the far right of the
     // grid, assign probability of 0.075
     transition_3 = {{min(state.first + 1, 3), state.second}, 0.075};
+
   } else if (action == "Left") {
     // Subtract from the x value (move left) unless we are at the far left of
     // the grid, assign probability of 0.85
@@ -63,6 +65,7 @@ vector<pair<pair<int, int>, float>> get_transitions(pair<int, int> state,
     // Subtract from the y value (move down) unless we are at the bottom of the
     // grid, assign probability of 0.075
     transition_3 = {{state.first, max(state.second - 1, 0)}, 0.075};
+
   } else if (action == "Right") {
     // Add to the x value (move right) unless we are at the far right of the
     // grid, assign probability of 0.85
@@ -81,10 +84,12 @@ vector<pair<pair<int, int>, float>> get_transitions(pair<int, int> state,
     // Set the transition to the original state because we cannot travel out of
     // bounds
     transition_1.first = state;
+
   } else if (transition_2.first == out_of_bounds) {
     // Set the transition to the original state because we cannot travel out of
     // bounds
     transition_2.first = state;
+
   } else if (transition_3.first == out_of_bounds) {
     // Set the transition to the original state because we cannot travel out of
     // bounds
@@ -97,18 +102,21 @@ vector<pair<pair<int, int>, float>> get_transitions(pair<int, int> state,
 
     // Define the list of transitions with the combined and remaining transition
     transitions = {transition_combo, transition_3};
+
   } else if (transition_1.first == transition_3.first) {
     // Combine the probabilities of the identical resulting states
     transition_combo = {state, 0.925};
 
     // Define the list of transitions with the combined and remaining transition
     transitions = {transition_combo, transition_2};
+
   } else if (transition_2.first == transition_3.first) {
     // Combine the probabilities of the identical resulting states
     transition_combo = {state, 0.15};
 
     // Define the list of transitions with the combined and remaining transition
     transitions = {transition_1, transition_combo};
+
   } else {
     // Define the list of transitions as the three defined transitions
     transitions = {transition_1, transition_2, transition_3};
@@ -127,9 +135,11 @@ float get_reward(pair<int, int> state, string action,
   if (transition == goals.first || transition == goals.second) {
     // Assign the reward for reaching a goal state
     reward = 1;
+
   } else if (transition == pit) {
     // Assign the reward for reaching the pit/bad state
     reward = -1;
+    
   } else {
     // Assign the reward for reaching any other state
     reward = -0.05;
