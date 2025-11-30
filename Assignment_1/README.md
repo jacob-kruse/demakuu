@@ -5,7 +5,7 @@ Class: CSCI 8920 | Decision Making Under Uncertainty<br>
 
 This folder contains all of my solutions to Parts I and II of Assignment 1. `Assignment_1.pdf` contains my scanned solutions for the written portions of the assignment. The `Fugitive_Network.dne` file is my Bayesian Network built with Netica to answer Part II.b.
 
-As the name suggests, the `Assignment_Description.pdf` provides the guidelines and questions for this assignment. If you want to install Netica, please see Part II.a in this PDF. 
+As the name suggests, the `Assignment_Description.pdf` provides the guidelines and questions for this assignment. If you want to install Netica, please see Part II.a in this PDF.
 
 ## Part II.b
 In my Bayesian Network, I assumed uniform probabilities for the locations of Robots i and j. Because the 4x4 grid has 16 locations, this leads to a probability of 1/16 or 6.25% that Robot i or Robot j is located in a specific cell of the grid. Shown in the image below is my Bayesian Network without any prior assumptions.

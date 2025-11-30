@@ -3,7 +3,7 @@ Name: Jacob Kruse<br>
 Student ID: 811103596<br>
 Class: CSCI 8920 | Decision Making Under Uncertainty<br>
 
-This folder contains all of my solutions to Parts I and II of Assignment 2. `Assignment_2.pdf` contains my scanned solutions for Part I of the assignement. The `policy_iteration.cpp` file provides my solution for Part II. As the name suggests, the `Assignment_Description.pdf` provides the guidelines and questions for this assignment.
+This folder contains all of my solutions to Parts I and II of Assignment 2. `Assignment_2.pdf` contains my scanned solutions for Part I of the assignment. The `policy_iteration.cpp` file provides my solution for Part II. As the name suggests, the `Assignment_Description.pdf` provides the guidelines and questions for this assignment.
 
 To compile `policy_iteration.cpp`, you can use the following command.
 
